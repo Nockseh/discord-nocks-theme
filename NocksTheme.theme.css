@@ -2,101 +2,171 @@
  * @name NocksTheme
  * @author Nockseh#3160
  * @version 1.0
- * @description Goes along with another theme (darker discord).
+ * @description bwug
 */
 
+/*@import url(https://raw.githack.com/hellbound1337/dark-discord/master/src/source.css);*/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600&display=swap');*/
+/*@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@400;600&display=swap');*/
 
+.theme-dark,
+.theme-light,
 :root {
-	--brand-experiment: #4E5D94 !important;
+	--background-primary: #141414 !important;
+    --background-secondary: #111111 !important;
+    --background-tertiary: #0c0c0c !important;
+    --background-accent: #4e5d94 !important;
+    --background-floating: black !important; 
+    --channels-default: #9f9f9f !important;
+    --text-muted: #b6b6b6 !important;
+    --text-normal: #ddd !important; 
+	--accent-color: #4e5d94;
 	--background-modifier-accent: rgba(201,201,201,.3) !important;
-
 	--scrollbar-thin-thumb: transparent;
 	--scrollbar-thin-track: transparent;
 	--scrollbar-auto-thumb: transparent;
 	--scrollbar-auto-track: transparent;
 	--scrollbar-auto-scrollbar-color-thumb: transparent;
 	--scrollbar-auto-scrollbar-color-track: transparent;
+	--profile-blend-mode: normal; /* normal if sync profile themes, exclusion otherwise */
+	--text-link: hsl(200, 50%, 50%);
+	/* fuck your color */
+	--brand-experiment: var(--accent-color) !important;
+	--brand-100:var(--accent-color) !important;
+    --brand-130:var(--accent-color) !important;
+    --brand-160:var(--accent-color) !important;
+    --brand-200:var(--accent-color) !important;
+    --brand-230:var(--accent-color) !important;
+    --brand-260:var(--accent-color) !important;
+    --brand-300:var(--accent-color) !important;
+    --brand-330:var(--accent-color) !important;
+    --brand-345:var(--accent-color) !important;
+    --brand-360:var(--accent-color) !important;
+    --brand-400:var(--accent-color) !important;
+    --brand-430:var(--accent-color) !important;
+    --brand-460:var(--accent-color) !important;
+    --brand-500:var(--accent-color) !important;
+    --brand-530:var(--accent-color) !important;
+    --brand-560:var(--accent-color) !important;
+    --brand-600:var(--accent-color) !important;
+    --brand-630:var(--accent-color) !important;
+    --brand-660:var(--accent-color) !important;
+    --brand-700:var(--accent-color) !important;
+    --brand-730:var(--accent-color) !important;
+    --brand-760:var(--accent-color) !important;
+    --brand-800:var(--accent-color) !important;
+    --brand-830:var(--accent-color) !important;
+    --brand-860:var(--accent-color) !important;
+    --brand-900:var(--accent-color) !important;
 }
 
 body {
-	--header-font: 'Open Sans', sans-serif;
+	--header-font: inherit;
+	--subheader-font: inherit;
+	--channel-font: 'Fira Mono';
 	--faded-white: rgba(201,201,201,.3);
+	--borders: 1px solid var(--faded-white);
 }
 
+
+
+/* --- TOP --- */
+[aria-label="Channel header"] {
+	border-bottom: var(--borders);
+	background: var(--background-tertiary) !important;
+}
 .icon-2xnN2Y { /*Top Icons @, #, Call, Pins, Inbox (Toolbar)*/
-	color: var(--faded-white) !important;
+	color: var(--channels-default) !important;
 }
 .title-17SveM { /*Channel Name Header*/
-	font-family: var(--header-font);
+	font-family: var(--channel-font);
 	font-weight: 600;
 	font-size: 20px;
 	letter-spacing: 1px;
-	color: var(--faded-white);
+	color: var(--channels-default);
 	overflow: visible;
 }
+
 .topic-11NuQZ { /*Channel Description Header*/
 	font-size: 16px;
-	color: var(--faded-white);
+	color: var(--channels-default);
 }
-
-.container-q97qHp { /*Member List Role Headers & Channel Group Headers*/
-	font-family: var(--header-font);
-	font-size: 13px;
-	text-decoration: underline;
-}
-
 .name-3Uvkvr { /*Server Name - Top Left*/
-	font-family: 'Open Sans';
+	font-family: var(--subheader-font);
+	color: var(--channels-default)
 }
 
-.botText-1fD6Qk { /*[BOT] Tag Text (Includes Plugins)*/
-	font-family: 'Open Sans';
-	font-weight: 600;
-	letter-spacing: -0.6px;
+.goalText-mbRUAP, .text-xs-normal-3O7EaX { /* server boost */
+	color: var(--channels-default) !important;
 }
-
-.panels-3wFtMD { /*User Dashboard (Bottom Left) (Including Spotify Plugin)*/
-	background: inherit;
+.container-1-ERn5  {
+	background: var(--background-tertiary);
 }
-.peopleColumn-1wMU14 { /*Friends List Page*/
-	background: #141414;
-}
-
 .wordmarkWindows-2dq6rw { /* Hide Logo in Titlebar*/
 	visibility: hidden;
 }
 .titleBar-1it3bQ:after { /*Add custom Titlebar*/
 	content: "Discord";
-	font-size: 14px;	
-	color: #fff;
+	/*font-family: 'Fira Mono';*/
+	font-weight: bold;
+	font-size: 16px;
+	color: var(--faded-white);
 	text-align: left;
 	position: absolute;
 	left: 10px;
 	top: 3px;
-	letter-spacing: 1px;
-}
-h3 { /* Header 3? */
-	font-family: var(--header-font) !important;
+	letter-spacing: 2px;
 }
 
-.clickable-1bVtEA { /*Usernames in chat*/
-	/* font-family: var(--header-font); */
-	font-weight: 600 !important;
+/* SIDEBARS */
+.container-2o3qEW {
+	border-left: var(--borders);
+}
+.container-q97qHp { /*Member List Role Headers & Channel Group Headers*/
+	font-family: var(--header-font);
+	font-size: 13px;
+	/*text-decoration: underline;*/
+	border-bottom: 1px dashed var(--faded-white);
+}
+.sidebar-1tnWFu { /*Channels sidebar*/
+	border-right: var(--borders);
+}
+.channelName-3KPsGw {
+	font-family: var(--channel-font);
+	font-size: 11pt;
+}
+.guilds-2JjMmN { /* server list sidebar */
+	border-right: var(--borders);
 }
 
-.submenu-1apzyU { /*context sub-menus*/
-	background: rgba(0,0,0,.9);
-	border: 1px;
-	border-color: var(--faded-white);
-	border-style: solid;
+.botTagRegular-kpctgU { /*[BOT] Tag (Includes Plugins)*/
+	opacity: 0.5;
+}
+.botText-1fD6Qk { /*[BOT] Tag Text (Includes Plugins)*/
+	font-family: inherit;
+	font-weight: 600;
+	letter-spacing: -0.25px;
 }
 
-#user-context { /*context menu*/
-	background: rgba(0,0,0,.9);
-	border: 1px;
-	border-color: var(--faded-white);
-	border-style: solid;
+.panels-3wFtMD { /*User Dashboard (Bottom Left) (Including Spotify Plugin)*/
+	background: var(--background-tertiary);
+}
+.gameActivityToggleAdded-Yd-YxC { /* above with gameActivityToggle compat */
+	background: var(--background-tertiary) !important;
+}
+.peopleColumn-1wMU14 { /*Friends List Page*/
+	background: var(--background-primary);
+}
+
+.username-h_Y3Us { /*Usernames in chat*/
+	font-size: 13pt;
+	font-weight: 600;
+}
+
+.menu-2TXYjN { /*context menu*/
+	border: var(--borders);
+	background: var(--background-tertiary);
 }
 
 .labelContainer-2vJzYL { /*context menu items*/
@@ -107,26 +177,32 @@ h3 { /* Header 3? */
 	background-color: inherit;
 }
 
+.connectionHeader-Ixbb1s, .connectContainer-1hylYM { /* settings -> connections */
+	background: var(--background-secondary);
+}
+.bd-addon-header {
+	background: var(--background-secondary) !important;
+}
+.bd-addon-card {
+	border: var(--borders);
+}
+
 .container-32HW5s:hover { /*friends & group dms items*/
-	background: #000;
+	background: var(--background-tertiary);
 }
 
-/*
-.header-23xsNx { message header
-	display: inline-block !important;
-}
-*/
-
-.tooltip-14MtrL {
-	background: rgba(0,0,0,0) !important;
-	backdrop-filter: blur(5px) grayscale(1) brightness(0.5);
+/* USER PROFILE POPOUTS (FUCK YOU x2) */
+.layer-fP3xEz {
+	backdrop-filter: blur(2px);
 }
 
 .menu-1QACrS { /* some context menus added by plugins */
-	border: 1px;
-	border-style: solid;
-	border-color: var(--faded-white);
-	background: rgba(0,0,0,.9);
+	border: var(--borders);
+	background: var(--background-tertiary);
+}
+.buttonsInner-1ynJCY { /* message hover context menu */
+	background: var(--background-tertiary);
+	border: var(--borders);
 }
 
 .group-spacing-16 .groupStart-3Mlgv1 { /* 1st message in message groups */
@@ -136,8 +212,11 @@ h3 { /* Header 3? */
 }
 
 .scrollableContainer-15eg7h { /* message bar */
-	background: transparent;
+	background: var(--background-secondary);
 	border: 1px solid var(--faded-white);
+}
+.form-3gdLxP { /* under message bar */
+	background: transparent;
 }
 
 .drawerSizingWrapper-1txdWG { /* gif picker x wrapper (424px default) */
@@ -145,4 +224,32 @@ h3 { /* Header 3? */
 }
 .positionContainer-dMArNx { /* gif picker y wrapper (444px default) */
 	height: 888px;
+}
+
+.selected-26oxtA { /* selected friend in dms */
+	background: var(--background-accent);
+}
+.modeSelected-3DmyhH { /* selected channel */
+	background: var(--background-accent);
+	border-radius: 4px;
+}
+.selected-1-Z6gm { /* selected user in guild list */
+	background: var(--background-accent);
+}
+.selected-1oxcpH { /* selected user in vc */
+	background: var(--background-accent);
+	border-radius: 4px;
+}
+
+.container-1zzFcN { /* vc dashboard */
+	background: var(--background-tertiary);
+	border-top: var(--borders);
+}
+
+/* fuck you discord */
+.channel-1Shao0.container-32HW5s[aria-posinset="2"] { /* fuck the nitro button */
+	display: none;
+}
+[aria-label="Send a gift"] { /* fuck the gift button */
+	display:none;
 }
