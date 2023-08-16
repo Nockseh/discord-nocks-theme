@@ -1,6 +1,7 @@
 /**
  * @name NocksTheme
- * @author Nockseh#3160
+ * @author nockseh
+ * @authorId 744452122300383353
  * @version 1.0
  * @description bwug
 */
@@ -37,7 +38,7 @@
     --brand-160:var(--accent-color-dark) !important;
     --brand-200:var(--accent-color-dark) !important;
     --brand-230:var(--accent-color-dark) !important;
-    --brand-260:var(--accent-color-dark) !important;
+    /* --brand-260:var(--accent-color-dark) !important; */
     --brand-300:var(--accent-color-dark) !important;
     --brand-330:var(--accent-color-dark) !important;
     --brand-345:var(--accent-color-dark) !important;
