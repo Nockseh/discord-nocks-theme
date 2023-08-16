@@ -6,6 +6,7 @@
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@500&display=swap');
 
 .theme-dark,
 .theme-light,
@@ -66,6 +67,9 @@ body {
 	--borders: 1px solid var(--faded-white);
 }
 
+::-webkit-scrollbar {
+	display:none;
+}
 
 
 /* --- TOP --- */
@@ -78,7 +82,7 @@ body {
 }
 .title-17SveM { /*Channel Name Header*/
 	font-family: var(--channel-font);
-	font-weight: 600;
+	font-weight: 500;
 	font-size: 20px;
 	letter-spacing: 1px;
 	color: var(--channels-default);
@@ -120,17 +124,48 @@ body {
 .container-2o3qEW {
 	border-left: var(--borders);
 }
-.container-q97qHp { /*Member List Role Headers & Channel Group Headers*/
-	font-family: var(--header-font);
-	font-size: 13px;
+
+.clickable-2AoIYN { /* Channel Group Headers*/
 	/*text-decoration: underline;*/
-	border-bottom: 1px dashed var(--faded-white);
+	/*background-color: var(--background-tertiary);*/
+	padding-bottom: 6px;
+	background: var(--background-tertiary);
+	border-bottom: dashed 1px var(--faded-white);
 }
+.mainContent-uDGa6R { /* channel group header text */
+	padding-top: 4px;
+	position: absolute;
+	left:30px;
+	overflow: visible;
+}
+.name-3BUDLf.container-q97qHp{ /* the actual text ^ */
+	font-size: 14px;
+	font-family: 'Open Sans';
+}
+.arrow-2HswgU { /* Channel group header expand arrow */
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 2px;
+	left: -25px;
+}
+
+.membersGroup-2eiWxl.container-q97qHp { /* Member List Role Headers */
+	border-bottom: dashed 1px var(--faded-white);
+	background: var(--background-tertiary);
+	margin-top: 20px;
+	padding-top: 12px;
+	font-size: 14px;
+	font-family: 'Open Sans';
+}
+
 .sidebar-1tnWFu { /*Channels sidebar*/
 	border-right: var(--borders);
 }
-.channelName-3KPsGw {
-	font-family: var(--channel-font);
+.containerDefault-YUSmu3 { /* channel buttons */
+	margin-right: 8px;
+}
+.channelName-3KPsGw { /* channel button labels */
 	font-size: 11pt;
 }
 .guilds-2JjMmN { /* server list sidebar */
@@ -199,14 +234,22 @@ body {
 	background: var(--background-tertiary);
 }
 .buttonsInner-1ynJCY { /* message hover context menu */
-	background: var(--background-tertiary);
+	background: var(--background-secondary);
 	border: var(--borders);
 }
 
-.group-spacing-16 .groupStart-3Mlgv1 { /* 1st message in message groups */
+.scroller-kQBbkU.customTheme-3QAYZq.auto-2TJ1RH.scrollerBase-1Pkza4.disableScrollAnchor-3Jzgzl.managedReactiveScroller-1LjJZ5 {
+	margin-right: 0px !important;
+}
+
+.group-spacing-16 .groupStart-3Mlgv1 { /* first message in message groups */
 	margin-top: 5px;
 	padding-top: 5px;
 	border-top: 1px dashed var(--faded-white)
+}
+
+.messageListItem-ZZ7v6g {
+	margin: 0px !important;
 }
 
 .scrollableContainer-15eg7h { /* message bar */
