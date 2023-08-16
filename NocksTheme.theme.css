@@ -5,10 +5,7 @@
  * @description bwug
 */
 
-/*@import url(https://raw.githack.com/hellbound1337/dark-discord/master/src/source.css);*/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
-/*@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600&display=swap');*/
-/*@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@400;600&display=swap');*/
 
 .theme-dark,
 .theme-light,
@@ -146,11 +143,12 @@ body {
 .botText-1fD6Qk { /*[BOT] Tag Text (Includes Plugins)*/
 	font-family: inherit;
 	font-weight: 600;
-	letter-spacing: -0.25px;
+	letter-spacing: -0.px;
 }
 
-.panels-3wFtMD { /*User Dashboard (Bottom Left) (Including Spotify Plugin)*/
-	background: var(--background-tertiary);
+.container-YkUktl { /*User Dashboard (Bottom Left) (Including Spotify Plugin)*/
+	background: var(--background-tertiary) !important;
+	border-top: var(--borders);
 }
 .gameActivityToggleAdded-Yd-YxC { /* above with gameActivityToggle compat */
 	background: var(--background-tertiary) !important;
