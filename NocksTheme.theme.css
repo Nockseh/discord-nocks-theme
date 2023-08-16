@@ -14,12 +14,13 @@
 	--background-primary: #141414 !important;
     --background-secondary: #111111 !important;
     --background-tertiary: #0c0c0c !important;
-    --background-accent: #4e5d94 !important;
+    --background-accent: hsl(227, 31%, 22%) !important;
     --background-floating: black !important; 
     --channels-default: #9f9f9f !important;
     --text-muted: #b6b6b6 !important;
     --text-normal: #ddd !important; 
-	--accent-color: #4e5d94;
+	--accent-color: hsl(227, 31%, 44%);
+	--accent-color-dark: hsl(227, 31%, 22%);
 	--background-modifier-accent: rgba(201,201,201,.3) !important;
 	--scrollbar-thin-thumb: transparent;
 	--scrollbar-thin-track: transparent;
@@ -30,33 +31,33 @@
 	--profile-blend-mode: normal; /* normal if sync profile themes, exclusion otherwise */
 	--text-link: hsl(200, 50%, 50%);
 	/* fuck your color */
-	--brand-experiment: var(--accent-color) !important;
-	--brand-100:var(--accent-color) !important;
-    --brand-130:var(--accent-color) !important;
-    --brand-160:var(--accent-color) !important;
-    --brand-200:var(--accent-color) !important;
-    --brand-230:var(--accent-color) !important;
-    --brand-260:var(--accent-color) !important;
-    --brand-300:var(--accent-color) !important;
-    --brand-330:var(--accent-color) !important;
-    --brand-345:var(--accent-color) !important;
-    --brand-360:var(--accent-color) !important;
-    --brand-400:var(--accent-color) !important;
-    --brand-430:var(--accent-color) !important;
-    --brand-460:var(--accent-color) !important;
-    --brand-500:var(--accent-color) !important;
-    --brand-530:var(--accent-color) !important;
-    --brand-560:var(--accent-color) !important;
-    --brand-600:var(--accent-color) !important;
-    --brand-630:var(--accent-color) !important;
-    --brand-660:var(--accent-color) !important;
-    --brand-700:var(--accent-color) !important;
-    --brand-730:var(--accent-color) !important;
-    --brand-760:var(--accent-color) !important;
-    --brand-800:var(--accent-color) !important;
-    --brand-830:var(--accent-color) !important;
-    --brand-860:var(--accent-color) !important;
-    --brand-900:var(--accent-color) !important;
+	--brand-experiment: var(--accent-color-dark) !important;
+	--brand-100:var(--accent-color-dark) !important;
+    --brand-130:var(--accent-color-dark) !important;
+    --brand-160:var(--accent-color-dark) !important;
+    --brand-200:var(--accent-color-dark) !important;
+    --brand-230:var(--accent-color-dark) !important;
+    --brand-260:var(--accent-color-dark) !important;
+    --brand-300:var(--accent-color-dark) !important;
+    --brand-330:var(--accent-color-dark) !important;
+    --brand-345:var(--accent-color-dark) !important;
+    --brand-360:var(--accent-color-dark) !important;
+    --brand-400:var(--accent-color-dark) !important;
+    --brand-430:var(--accent-color-dark) !important;
+    --brand-460:var(--accent-color-dark) !important;
+    --brand-500:var(--accent-color-dark) !important;
+    --brand-530:var(--accent-color-dark) !important;
+    --brand-560:var(--accent-color-dark) !important;
+    --brand-600:var(--accent-color-dark) !important;
+    --brand-630:var(--accent-color-dark) !important;
+    --brand-660:var(--accent-color-dark) !important;
+    --brand-700:var(--accent-color-dark) !important;
+    --brand-730:var(--accent-color-dark) !important;
+    --brand-760:var(--accent-color-dark) !important;
+    --brand-800:var(--accent-color-dark) !important;
+    --brand-830:var(--accent-color-dark) !important;
+    --brand-860:var(--accent-color-dark) !important;
+    --brand-900:var(--accent-color-dark) !important;
 }
 
 body {
@@ -71,6 +72,23 @@ body {
 	display:none;
 }
 
+.tooltip-2D-CpC, .tooltipPointer-sMBQqe, .tooltip-33Jwqe, .tooltipPointer-sMBQqe {
+	border: var(--borders)
+}
+
+/* --- quit highlighting stuff on hover --- */
+.wrapper-NhbLHG:hover a {
+	background: inherit !important;
+}
+.wrapper-NhbLHG:not(:hover) a {
+	background: inherit !important;
+}
+.member-2gU6Ar:hover .layout-1qmrhw {
+	background:inherit;
+}
+.member-2gU6Ar:not(:hover) .layout-1qmrhw {
+	background:inherit;
+}
 
 /* --- TOP --- */
 [aria-label="Channel header"] {
@@ -101,7 +119,7 @@ body {
 .goalText-mbRUAP, .text-xs-normal-3O7EaX { /* server boost */
 	color: var(--channels-default) !important;
 }
-.container-1-ERn5  {
+.container-1-ERn5 /* server name top left */ {
 	background: var(--background-tertiary);
 }
 .wordmarkWindows-2dq6rw { /* Hide Logo in Titlebar*/
@@ -120,6 +138,11 @@ body {
 	letter-spacing: 2px;
 }
 
+
+.userPopoutOverlayBackground-3A0Pcz.overlayBackground-2aa7wt {
+	background: var(--background-primary);
+}
+
 /* SIDEBARS */
 .container-2o3qEW {
 	border-left: var(--borders);
@@ -129,7 +152,7 @@ body {
 	/*text-decoration: underline;*/
 	/*background-color: var(--background-tertiary);*/
 	padding-bottom: 6px;
-	background: var(--background-tertiary);
+	background: var(--background-secondary);
 	border-bottom: dashed 1px var(--faded-white);
 }
 .mainContent-uDGa6R { /* channel group header text */
@@ -150,11 +173,19 @@ body {
 	left: -25px;
 }
 
+.blobContainer-ikKyFs,
+.circleIconButton-1VxDrg { /* server icons */
+	border: var(--borders);
+	border-width: 2px;
+	border-radius: 50%;
+}
+
 .membersGroup-2eiWxl.container-q97qHp { /* Member List Role Headers */
 	border-bottom: dashed 1px var(--faded-white);
-	background: var(--background-tertiary);
+	background: var(--background-secondary);
 	margin-top: 20px;
-	padding-top: 12px;
+	margin-bottom: 8px;
+	padding-top: 20px;
 	font-size: 14px;
 	font-family: 'Open Sans';
 }
@@ -165,8 +196,14 @@ body {
 .containerDefault-YUSmu3 { /* channel buttons */
 	margin-right: 8px;
 }
+
 .channelName-3KPsGw { /* channel button labels */
 	font-size: 11pt;
+}
+.children-3MeUvj { /* add channel button */
+	position: absolute;
+	right: 4px;
+	bottom: 2px;
 }
 .guilds-2JjMmN { /* server list sidebar */
 	border-right: var(--borders);
@@ -178,7 +215,7 @@ body {
 .botText-1fD6Qk { /*[BOT] Tag Text (Includes Plugins)*/
 	font-family: inherit;
 	font-weight: 600;
-	letter-spacing: -0.px;
+	letter-spacing: -0.5px;
 }
 
 .container-YkUktl { /*User Dashboard (Bottom Left) (Including Spotify Plugin)*/
@@ -202,8 +239,14 @@ body {
 	background: var(--background-tertiary);
 }
 
-.labelContainer-2vJzYL { /*context menu items*/
+.item-5ApiZt { /*context menu items*/
 	margin: 0px;
+	margin-right: 8px;
+}
+.submenuPaddingContainer-QgnL1r { /* context submenu */
+	padding-left: 0px;
+	position: relative;
+	left: -4px;
 }
 
 .colorDefault-CDqZdO.focused-3qFvc8 { /*context menu hovered items*/
@@ -220,8 +263,11 @@ body {
 	border: var(--borders);
 }
 
-.container-32HW5s:hover { /*friends & group dms items*/
-	background: var(--background-tertiary);
+.container-32HW5s:hover .interactive-26HRN_ { /*friends & group dms items*/
+	background: inherit;
+}
+.container-32HW5s:not(:hover) .interactive-26HRN_ { /*friends & group dms items*/
+	background: inherit;
 }
 
 /* USER PROFILE POPOUTS (FUCK YOU x2) */
@@ -229,10 +275,6 @@ body {
 	backdrop-filter: blur(2px);
 }
 
-.menu-1QACrS { /* some context menus added by plugins */
-	border: var(--borders);
-	background: var(--background-tertiary);
-}
 .buttonsInner-1ynJCY { /* message hover context menu */
 	background: var(--background-secondary);
 	border: var(--borders);
@@ -268,7 +310,7 @@ body {
 }
 
 .selected-26oxtA { /* selected friend in dms */
-	background: var(--background-accent);
+	background: var(--background-accent) !important;
 }
 .modeSelected-3DmyhH { /* selected channel */
 	background: var(--background-accent);
@@ -287,10 +329,17 @@ body {
 	border-top: var(--borders);
 }
 
-/* fuck you discord */
-.channel-1Shao0.container-32HW5s[aria-posinset="2"] { /* fuck the nitro button */
-	display: none;
+.collapsed-2KOacR {
+	border-bottom: none;
 }
-[aria-label="Send a gift"] { /* fuck the gift button */
+
+/* fuck you discord */
+.channel-1Shao0.container-32HW5s[aria-posinset="2"], /* nitro button */
+[aria-label="Send a gift"], /* gift button */
+.container-2giAcK.containerWithMargin-1CVXAM, /* server boost ui */
+.containerDefault-YUSmu3.wrapper-NhbLHG, /* browse channels button */
+.sectionDivider-189lqb, /* divider */
+.content-yjf30S div[style="height: 12px;"] /* divider */
+{
 	display:none;
 }
