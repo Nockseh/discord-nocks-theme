@@ -72,9 +72,23 @@ body {
 ::-webkit-scrollbar {
 	display:none;
 }
+::selection {
+	background: var(--accent-color);
+}
 
 .tooltip-2D-CpC, .tooltipPointer-sMBQqe, .tooltip-33Jwqe, .tooltipPointer-sMBQqe {
 	border: var(--borders)
+}
+.button-lA2rvH.button-ejjZWC:hover {
+	background:var(--accent-color-dark);
+}
+
+#slate-toolbar, #slate-toolbar::before { /* when selecting text in the message box */
+	border: var(--borders);
+}
+
+.wrapper--nA0oy, .separator-12G2Op { /* quick react in context menu */
+	display:none;
 }
 
 /* --- quit highlighting stuff on hover --- */
