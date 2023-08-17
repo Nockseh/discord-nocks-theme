@@ -13,13 +13,13 @@
 .theme-light,
 :root {
 	--background-primary: #141414 !important;
-    --background-secondary: #111111 !important;
+    --background-secondary: #121212 !important;
     --background-tertiary: #0c0c0c !important;
     --background-accent: hsl(227, 31%, 22%) !important;
-    --background-floating: black !important; 
-    --channels-default: #9f9f9f !important;
-    --text-muted: #b6b6b6 !important;
-    --text-normal: #ddd !important; 
+    --background-floating: #0c0c0c !important; 
+    --channels-default: #aaa !important;
+    --text-muted: #bbb !important;
+    --text-normal: #ccc !important; 
 	--accent-color: hsl(227, 31%, 44%);
 	--accent-color-dark: hsl(227, 31%, 22%);
 	--background-modifier-accent: rgba(201,201,201,.3) !important;
@@ -61,12 +61,21 @@
     --brand-900:var(--accent-color-dark) !important;
 }
 
+svg {
+	color: var(--channels-default) !important;
+}
+
 body {
 	--header-font: inherit;
 	--subheader-font: inherit;
 	--channel-font: 'Fira Mono';
-	--faded-white: rgba(201,201,201,.3);
+	--faded-white: rgba(200,200,200,.25);
 	--borders: 1px solid var(--faded-white);
+}
+
+[aria-label="Text (Limited)"] {
+	background-image: url('https://www.svgrepo.com/show/471499/hash-01.svg');
+
 }
 
 ::-webkit-scrollbar {
@@ -91,6 +100,14 @@ body {
 	display:none;
 }
 
+.timestamp-p1Df1m { /* message timestamps */
+	color: var(--faded-white) !important;
+	opacity:0;
+}
+.messageListItem-ZZ7v6g:hover .timestamp-p1Df1m { /* show timestamp on hover */
+	opacity:1;
+}
+
 /* --- quit highlighting stuff on hover --- */
 .wrapper-NhbLHG:hover a {
 	background: inherit !important;
@@ -104,6 +121,7 @@ body {
 .member-2gU6Ar:not(:hover) .layout-1qmrhw {
 	background:inherit;
 }
+
 
 /* --- TOP --- */
 [aria-label="Channel header"] {
@@ -166,6 +184,7 @@ body {
 .clickable-2AoIYN { /* Channel Group Headers*/
 	/*text-decoration: underline;*/
 	/*background-color: var(--background-tertiary);*/
+	opacity: 0.5;
 	padding-bottom: 6px;
 	background: var(--background-secondary);
 	border-bottom: dashed 1px var(--faded-white);
@@ -196,6 +215,7 @@ body {
 }
 
 .membersGroup-2eiWxl.container-q97qHp { /* Member List Role Headers */
+	opacity: 0.5;
 	border-bottom: dashed 1px var(--faded-white);
 	background: var(--background-secondary);
 	margin-top: 20px;
@@ -347,7 +367,7 @@ body {
 .collapsed-2KOacR {
 	border-bottom: none;
 }
-
+t
 /* fuck you discord */
 .channel-1Shao0.container-32HW5s[aria-posinset="2"], /* nitro button */
 [aria-label="Send a gift"], /* gift button */
@@ -357,4 +377,9 @@ body {
 .content-yjf30S div[style="height: 12px;"] /* divider */
 {
 	display:none;
+}
+
+/* fuck people with gay colors */
+span[color=""] {
+	color: #f00 !important;
 }
